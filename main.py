@@ -5,14 +5,15 @@ import requests
 from requests.api import request
 import json
 import re
-
+https://icap.iconiq.ai/talk?&botkey=icH-VVd4uNBhjUid30-xM9QhnvAaVS3wVKA3L8w2mmspQ-hoUB3ZK153sEG3MX-Z8bKchASVLAo~&channel=7&sessionid=482070240&client_name=uuiprod-un18e6d73c-user-19422&id=true
 def chatbot(message):
     ai = {
         "input": message,
         "botkey": "icH-VVd4uNBhjUid30-xM9QhnvAaVS3wVKA3L8w2mmspQ-hoUB3ZK153sEG3MX-Z8bKchASVLAo~",
         "channel": 7,
         "sessionid": 482070240,
-        "client_name": "uuiprod-un18e6d73c-user-19422"
+        "client_name": "uuiprod-un18e6d73c-user-19422",
+        "id": "true"
     }
     url = "https://icap.iconiq.ai/talk"
     response = requests.post(url, ai).json()
