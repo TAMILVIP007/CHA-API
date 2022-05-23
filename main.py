@@ -2,13 +2,12 @@ from fastapi import FastAPI, Request
 from os import link
 import lxml
 import requests
-from requests.api import request
 import json
 import re
 
-def chatbot(message):
+def chatbot(text):
     ai = {
-        "input": message,
+        "input": text,
         "botkey": "icH-VVd4uNBhjUid30-xM9QhnvAaVS3wVKA3L8w2mmspQ-hoUB3ZK153sEG3MX-Z8bKchASVLAo~",
         "channel": 7,
         "sessionid": 482070240,
@@ -27,7 +26,7 @@ def root(request: Request):
 @app.get('/chatbot')
 async def chatbot(message: str):
     data = chatbot(message)
-    return {'message': data}
+    return {'Reply': data}
 
 
 
