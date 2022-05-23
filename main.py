@@ -5,7 +5,7 @@ import requests
 import json
 import re
 
-def chatbot(text):
+def chatbotai(text):
     ai = {
         "input": text,
         "botkey": "icH-VVd4uNBhjUid30-xM9QhnvAaVS3wVKA3L8w2mmspQ-hoUB3ZK153sEG3MX-Z8bKchASVLAo~",
@@ -25,7 +25,7 @@ def root(request: Request):
 
 @app.get('/chatbot')
 async def chatbot(message: str):
-    data = chatbot(message)
+    data = chatbotai(message)
     return {'Reply': data}
 
 
