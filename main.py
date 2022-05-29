@@ -23,7 +23,7 @@ app = FastAPI()
 def root(request: Request):
     return {"root": request.url.hostname}
 
-@app.get('/chatbot')
+@app.get('/{message}')
 async def chatbot(message: str):
     data = chatbotai(message)
     return {'Reply': data}
