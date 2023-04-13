@@ -6,15 +6,12 @@ import json
 import re
 
 def chatbotai(text):
-    ai = {
-        "input": text,
-        "botkey": "icH-VVd4uNBhjUid30-xM9QhnvAaVS3wVKA3L8w2mmspQ-hoUB3ZK153sEG3MX-Z8bKchASVLAo~",
-        "channel": 7,
-        "sessionid": 482070240,
-        "client_name": "uuiprod-un18e6d73c-user-19422",
-        "id": "true"
-    }
-    url = "https://icap.iconiq.ai/talk"
+    params= {
+                "uid":"52227b3dc5d3bebe",
+                "input":text,
+                "sessionid":"483786864",
+            }
+    url = "https://kuli.kuki.ai/cptalk"
     response = requests.post(url, ai).json()
     return response["responses"]
 
